@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rls-IU-Itw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="UmbrellaJudgement" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="08U-pR-3IO">
+                                <rect key="frame" x="20" y="116" width="374" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="R2A-7V-Wch"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umbrella Judgement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oi7-oG-PzP">
+                                <rect key="frame" x="20" y="369" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="zws-Ew-KGt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="傘が必要か判断します" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dnN-9s-sDg">
+                                <rect key="frame" x="20" y="492" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lFu-Vy-gke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhQ-Lx-pr2">
+                                <rect key="frame" x="20" y="682" width="374" height="102"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="y9D-gd-1Ko"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                <state key="normal" title="Location Information">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3o-bZ-9mk"/>
+                                    <segue destination="JNE-Ro-8Wf" kind="show" identifier="toUmbrellaVC" id="6ge-CZ-tva"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dnN-9s-sDg" firstAttribute="top" secondItem="oi7-oG-PzP" secondAttribute="bottom" constant="63" id="0tg-5B-aPM"/>
+                            <constraint firstItem="08U-pR-3IO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1xh-kh-M8E"/>
+                            <constraint firstItem="oi7-oG-PzP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="42N-MY-j9N"/>
+                            <constraint firstItem="oi7-oG-PzP" firstAttribute="top" secondItem="08U-pR-3IO" secondAttribute="bottom" constant="76" id="Eyf-9A-7MQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WhQ-Lx-pr2" secondAttribute="trailing" constant="20" id="LBx-pc-JWo"/>
+                            <constraint firstItem="WhQ-Lx-pr2" firstAttribute="top" secondItem="dnN-9s-sDg" secondAttribute="bottom" constant="150" id="a5s-5N-S7q"/>
+                            <constraint firstItem="dnN-9s-sDg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="be3-ei-TaR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oi7-oG-PzP" secondAttribute="trailing" constant="20" id="h7b-Ui-upz"/>
+                            <constraint firstItem="08U-pR-3IO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="p1M-D1-jRM"/>
+                            <constraint firstItem="WhQ-Lx-pr2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pOX-8o-SBY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnN-9s-sDg" secondAttribute="trailing" constant="20" id="pxW-Wk-dMO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="08U-pR-3IO" secondAttribute="trailing" constant="20" id="uBu-Yw-C8E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rKk-By-oGb"/>
+                    <connections>
+                        <outlet property="umbrellaImage" destination="08U-pR-3IO" id="mQk-eb-1fX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="61.607142857142854"/>
+        </scene>
+        <!--UmbrellaVC-->
+        <scene sceneID="h18-6z-hdo">
+            <objects>
+                <viewController storyboardIdentifier="toUmbrellaVC" id="JNE-Ro-8Wf" customClass="UmbrellaVC" customModule="UmbrellaJudgement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ezt-4I-QL2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="YsY-ny-s3p">
+                                <rect key="frame" x="144" y="600" width="126.5" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="m94-BH-Nih"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="48" name="HiraMaruProN-W4"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日も良い1日を☺️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5In-49-nT8">
+                                <rect key="frame" x="12.5" y="724" width="389.5" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="deq-aV-fok"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="45"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-Ig-eFO">
+                                <rect key="frame" x="20" y="393" width="374" height="107"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本日の降水確率は、" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dng-uY-c3e">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="Dvu-bT-v52"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="a5F-gr-Bi1">
+                                        <rect key="frame" x="0.0" y="31" width="374" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Ldx-Dh-eeV"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="cQ7-71-eEm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="48"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="です。" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDr-od-ZLc">
+                                        <rect key="frame" x="0.0" y="87" width="374" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="AAY-yk-0J3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UDr-od-ZLc" firstAttribute="centerX" secondItem="xIM-Ig-eFO" secondAttribute="centerX" id="Ldi-Va-Ve7"/>
+                                    <constraint firstItem="dng-uY-c3e" firstAttribute="centerX" secondItem="xIM-Ig-eFO" secondAttribute="centerX" id="ikc-am-C4p"/>
+                                    <constraint firstItem="a5F-gr-Bi1" firstAttribute="centerX" secondItem="xIM-Ig-eFO" secondAttribute="centerX" id="uJ5-Av-wCi"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Skr-Ja-jc2">
+                                <rect key="frame" x="20" y="188" width="374" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたが今いる場所は、" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0R-vL-6Ef">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="ddm-Ce-ViV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="hM4-pW-QV9">
+                                        <rect key="frame" x="0.0" y="52" width="374" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="0xQ-cb-bEg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="48"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hM4-pW-QV9" firstAttribute="centerX" secondItem="Skr-Ja-jc2" secondAttribute="centerX" id="B2Z-cP-GSq"/>
+                                    <constraint firstItem="hM4-pW-QV9" firstAttribute="top" secondItem="h0R-vL-6Ef" secondAttribute="bottom" constant="10" id="CnH-JK-IAs"/>
+                                    <constraint firstItem="h0R-vL-6Ef" firstAttribute="centerX" secondItem="Skr-Ja-jc2" secondAttribute="centerX" id="LfF-1o-WV3"/>
+                                    <constraint firstItem="hM4-pW-QV9" firstAttribute="leading" secondItem="Skr-Ja-jc2" secondAttribute="leading" id="R9l-Cl-ZWI"/>
+                                    <constraint firstAttribute="height" constant="100" id="lfp-Ie-rmT"/>
+                                    <constraint firstAttribute="trailing" secondItem="hM4-pW-QV9" secondAttribute="trailing" id="uj5-Fw-p4J"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E7T-eU-fVM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xIM-Ig-eFO" firstAttribute="top" secondItem="Skr-Ja-jc2" secondAttribute="bottom" constant="105" id="0en-kV-ueN"/>
+                            <constraint firstItem="YsY-ny-s3p" firstAttribute="centerX" secondItem="ezt-4I-QL2" secondAttribute="centerX" id="5ba-r4-6y6"/>
+                            <constraint firstItem="Skr-Ja-jc2" firstAttribute="top" secondItem="E7T-eU-fVM" secondAttribute="top" constant="100" id="92H-mf-Ocd"/>
+                            <constraint firstItem="E7T-eU-fVM" firstAttribute="trailing" secondItem="xIM-Ig-eFO" secondAttribute="trailing" constant="20" id="Qld-aZ-XZ7"/>
+                            <constraint firstItem="YsY-ny-s3p" firstAttribute="top" secondItem="xIM-Ig-eFO" secondAttribute="bottom" constant="100" id="Rft-sM-nH7"/>
+                            <constraint firstItem="xIM-Ig-eFO" firstAttribute="leading" secondItem="E7T-eU-fVM" secondAttribute="leading" constant="20" id="Rll-b1-qCF"/>
+                            <constraint firstItem="E7T-eU-fVM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YsY-ny-s3p" secondAttribute="trailing" id="TdE-4H-CiF"/>
+                            <constraint firstItem="5In-49-nT8" firstAttribute="centerX" secondItem="ezt-4I-QL2" secondAttribute="centerX" id="Tmp-cJ-Kqg"/>
+                            <constraint firstItem="5In-49-nT8" firstAttribute="top" secondItem="YsY-ny-s3p" secondAttribute="bottom" constant="24" id="Y8i-FT-Nl7"/>
+                            <constraint firstItem="YsY-ny-s3p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E7T-eU-fVM" secondAttribute="leading" id="bdX-zo-3It"/>
+                            <constraint firstItem="E7T-eU-fVM" firstAttribute="trailing" secondItem="Skr-Ja-jc2" secondAttribute="trailing" constant="20" id="fOP-z9-lve"/>
+                            <constraint firstItem="5In-49-nT8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E7T-eU-fVM" secondAttribute="leading" id="kNE-Qm-RgX"/>
+                            <constraint firstItem="Skr-Ja-jc2" firstAttribute="centerX" secondItem="ezt-4I-QL2" secondAttribute="centerX" id="m36-Gv-Pff"/>
+                            <constraint firstItem="Skr-Ja-jc2" firstAttribute="leading" secondItem="E7T-eU-fVM" secondAttribute="leading" constant="20" id="mHd-R9-ng6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5In-49-nT8" secondAttribute="trailing" id="tUP-4q-MFS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WuI-9x-lZ4"/>
+                    <connections>
+                        <outlet property="label1" destination="hM4-pW-QV9" id="bLy-Tt-FTV"/>
+                        <outlet property="label2" destination="a5F-gr-Bi1" id="2cR-wN-LVU"/>
+                        <outlet property="label3" destination="YsY-ny-s3p" id="ZeU-PT-kU2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTB-2F-7Sx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921.7391304347827" y="61.607142857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PCH-nh-v6S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rls-IU-Itw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4ey-Qf-fCg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="L1P-Ry-9NB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDd-Nj-icU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
