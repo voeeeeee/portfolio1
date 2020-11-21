@@ -141,8 +141,8 @@ class HomeVC: UIViewController,CLLocationManagerDelegate {
     
     //天気予報APIを用いて18時間後までの最大降水確率を取得する
     private func getWeatherData()  {
-        
-        let id = "bde94a20b5a2f4f8f0aead754af2d1e4"
+        //自分のOpenWeather IDを入力する
+        let id = "your ID"
         let baseUrl = "http://api.openweathermap.org/data/2.5/forecast?lat=" + "\(latitudeNow)" + "&lon=" + "\(longitudeNow)" + "&exclude=daily&lang=ja&cnt=6&.pop&appid=" + "\(id)"
         
         AF.request(baseUrl, method: .get).responseJSON { [self] response in
